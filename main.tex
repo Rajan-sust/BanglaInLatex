@@ -1,18 +1,13 @@
 \documentclass{article}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{bengali}
 
-
-% adding fontspec pkg and kalpurush font
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-\newfontface{\bn}{kalpurush.ttf}
-
-\title{Bangla Writing in Latex}
-\author{imrajon0@gmail.com}
-\date{26 July, 2019}
-
+\newfontfamily\englishfont{Noto Sans}
+\newfontfamily\bengalifont[Script=Bengali]{Noto Sans Bengali}
 
 \begin{document}
-\maketitle
-\section*{Club Football}
-\bn{অনেক আশা করে লিভারপুল ছেড়ে বার্সেলোনায় যোগ দিয়েছিলেন ব্রাজিল তারকা ফিলিপ কুতিনহো। দেড় বছর পর এখন সেই কুতিনহোই বার্সার মূল একাদশে জায়গা পান না। কুতিনহোকে বিক্রি করে দেওয়ার সর্বাত্মক চেষ্টা চালিয়ে যাচ্ছে বার্সেলোনা। কুতিনহোর পরবর্তী ক্লাব হিসেবে উচ্চারিত হচ্ছে লিভারপুলের নামও। }
+
+This is an English sentence with some Bengali text: \textbengali{এটি বাংলা ভাষা।} Here is some more English text.
+
 \end{document}
