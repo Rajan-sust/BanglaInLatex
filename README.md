@@ -1,5 +1,5 @@
 ### Changing Compiler from Overleaf
-* Sometimes for certain languages, classes and packages it may be necessary to use a different compiler like xelatex than the default pdflatex. We have to set XeLatex instead of PdfLatex for using fontspec package.</br>
+* Sometimes for certain languages, classes and packages it may be necessary to use a different compiler like xelatex than the default pdflatex. We have to set XeLatex instead of PdfLatex for writing Bangla</br>
 
 	* To change the compiler, simply click into the left hand menu </br>
 	![First Image](/images/first.png)
@@ -8,24 +8,23 @@
 	![Second Image](/images/second.png)
 
 
-### Download Any Bengali Font and Upload in Overleaf
 
-Download from [Free Bangla Fonts Download](https://www.omicronlab.com/bangla-fonts.html)
-</br>
-I'm using Kalpurush font. Without downloading you can take kalpurush.ttf file from this repository. Finally, you have to upload it in overleaf.
 
-### Add the following code snippet
+### Code snippet for Bangla
 
 ```tex
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-\newfontface{\bn}{kalpurush.ttf}
-```
-	
-### Bangla Writing
+\documentclass{article}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{bengali}
 
+\newfontfamily\englishfont{Noto Sans}
+\newfontfamily\bengalifont[Script=Bengali]{Noto Sans Bengali}
 
+\begin{document}
 
-```tex
-\bn{অনেক আশা করে লিভারপুল ছেড়ে বার্সেলোনায় যোগ দিয়েছিলেন ব্রাজিল তারকা ফিলিপ কুতিনহো।}
+This is an English sentence with some Bengali text: \textbengali{এটি বাংলা ভাষা।} Here is some more English text.
+
+\end{document}
+
 ```
